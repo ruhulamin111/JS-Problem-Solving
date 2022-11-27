@@ -33,3 +33,22 @@ function checkString(str) {
 
 // console.log(checkString('Lorem ipsum dolor sit amet consectetur adipisicing elit Itaque harum'));
 
+
+function same(arr1, arr2) {
+    if (arr1.length !== arr2.length) {
+        return;
+    }
+    for (let i = 0; i < arr1.length; i++) {
+        let indexCheck = arr2.indexOf(arr1[i] ** 2)
+        if (indexCheck === -1) {
+            return;
+        } else {
+            arr2.splice(indexCheck, 1)
+        }
+    }
+    return true;
+}
+
+console.log(same([2, 3, 4, 5], [4, 9, 16, 25]));
+
+
