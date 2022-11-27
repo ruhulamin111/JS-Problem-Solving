@@ -15,5 +15,21 @@ function lowAndHighNumber(array) {
     }
     return [low, high]
 }
-console.log(lowAndHighNumber([-3, -2, -19, 2, 6, 90, 34, 'array', 'number', true]))
+// console.log(lowAndHighNumber([-3, -2, -19, 2, 6, 90, 34, 'array', 'number', true]))
+
+
+function checkString(str) {
+    let string = {}
+    for (let i = 0; i < str.length; i++) {
+        let element = str[i].toLowerCase()
+        if (string[element]) {
+            string[element]++;
+        } else {
+            string[element] = 1;
+        }
+    }
+    return string;
+}
+
+// console.log(checkString('Lorem ipsum dolor sit amet consectetur adipisicing elit Itaque harum'));
 
